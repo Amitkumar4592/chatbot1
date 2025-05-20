@@ -78,7 +78,7 @@ This project replicates the Intercom AI-enhanced admin panel, focusing on UI/UX 
   /pages - Page components
   /contexts - React context providers
   /assets - Static assets like images
-
+```
 
 ## Mobile Responsiveness
 The application is fully responsive and adapts to different screen sizes:
