@@ -1,0 +1,214 @@
+.container {
+  height: 100%;
+  width: 320px;
+  background-color: var(--color-white);
+  border-left: 1px solid var(--color-gray-200);
+  overflow-y: auto;
+}
+
+.header {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--color-gray-800);
+}
+
+.closeButton {
+  padding: 4px;
+  color: var(--color-gray-500);
+  border-radius: 100%;
+}
+
+.closeButton:hover {
+  color: var(--color-gray-700);
+  background-color: var(--color-gray-100);
+}
+
+.content {
+  padding: 16px;
+}
+
+.customerHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.customerInfo {
+  margin-left: 12px;
+}
+
+.customerName {
+  font-weight: 500;
+  color: var(--color-gray-900);
+}
+
+.customerCompany {
+  font-size: 14px;
+  color: var(--color-gray-500);
+}
+
+.infoGrid {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.infoIcon {
+  color: var(--color-gray-500);
+  margin-right: 8px;
+}
+
+.infoText {
+  color: var(--color-gray-800);
+}
+
+.sectionTitle {
+  font-weight: 500;
+  color: var(--color-gray-700);
+  margin-bottom: 8px;
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  padding: 4px 8px;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.priorityContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.priorityHigh {
+  color: #ef4444;
+}
+
+.priorityMedium {
+  color: #f59e0b;
+}
+
+.priorityLow {
+  color: #10b981;
+}
+
+.priorityIcon {
+  margin-right: 4px;
+}
+
+.priorityText {
+  font-size: 14px;
+}
+
+.accountInfo {
+  background-color: var(--color-gray-50);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.accountGrid {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.accountRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accountLabel {
+  color: var(--color-gray-600);
+}
+
+.accountValue {
+  font-weight: 500;
+  color: var(--color-gray-800);
+}
+
+.previousIssues {
+  margin-bottom: 24px;
+}
+
+.issuesList {
+  border-top: 1px solid var(--color-gray-100);
+}
+
+.issueItem {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.issueHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issueTopic {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+}
+
+.issueDate {
+  font-size: 12px;
+  color: var(--color-gray-500);
+}
+
+.viewProfileButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.viewProfileButton:hover {
+  background-color: var(--color-gray-50);
+}
+
+.viewProfileIcon {
+  margin-right: 8px;
+}

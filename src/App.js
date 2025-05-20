@@ -1,48 +1,32 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import TshirtImage from "./TshirtImage";
-import CustomizationForm from "./CustomizationForm";
-import NavBar from "./NavBar";
-import "./styles.css";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import './App.css';
+
+// Layout component
+import Layout from './components/layout/Layout';
+
+// Pages
+import InboxPage from './pages/InboxPage';
+import ConversationsPage from './pages/ConversationsPage';
+import CustomersPage from './pages/CustomersPage';
+import ReportsPage from './pages/ReportsPage';
+import SettingsPage from './pages/SettingsPage';
 
 function App() {
-  const [show3D, setShow3D] = useState(false);
-  const [uploadedImg, setUploadedImg] = useState(null);
-  const [tshirtText, setTshirtText] = useState(["", "", ""]);
-  const formRef = useRef();
-
-  // ALT+Q toggles 3D/static
-  useEffect(() => {
-    const handler = (e) => {
-      if (e.altKey && e.key.toLowerCase() === "q") {
-        setShow3D((prev) => !prev);
-      }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, []);
-
   return (
-    <>
-      <NavBar />
-      <div className="container">
-        <div className="left-panel">
-          <TshirtImage
-            show3D={show3D}
-            uploadedImg={uploadedImg}
-            tshirtText={tshirtText}
-          />
-        </div>
-        <div className="right-panel">
-          <CustomizationForm
-            formRef={formRef}
-            setUploadedImg={setUploadedImg}
-            tshirtText={tshirtText}
-            setTshirtText={setTshirtText}
-          />
-        </div>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="/inbox" replace />} />
+          <Route path="conversations" element={<ConversationsPage />} />
+          <Route path="inbox" element={<InboxPage />} />
+          <Route path="customers" element={<CustomersPage />} />
+          <Route path="reports" element={<ReportsPage />} />
+          <Route path="settings" element={<SettingsPage />} />
+          <Route path="*" element={<Navigate to="/inbox" replace />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

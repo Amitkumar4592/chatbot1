@@ -1,0 +1,311 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gray-50);
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-gray-800);
+}
+
+.addButton {
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.addButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.cardHeader {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.filterControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.searchContainer {
+  flex: 1;
+  min-width: 300px;
+}
+
+.searchInputWrapper {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-gray-400);
+}
+
+.searchInput {
+  display: block;
+  width: 100%;
+  padding: 8px 12px 8px 40px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  background-color: var(--color-gray-50);
+  font-size: 14px;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  color: var(--color-gray-700);
+}
+
+.filterButton:hover {
+  background-color: var(--color-gray-50);
+}
+
+.filterIcon {
+  margin-right: 8px;
+}
+
+.chevronIcon {
+  margin-left: 8px;
+}
+
+.filterDropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 8px;
+  width: 256px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-gray-200);
+  z-index: 10;
+  padding: 12px;
+}
+
+.filterHeader {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-gray-700);
+}
+
+.tagList {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.tagItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox {
+  height: 16px;
+  width: 16px;
+  color: var(--color-primary);
+  border-radius: 3px;
+  border: 1px solid var(--color-gray-300);
+}
+
+.tagLabel {
+  margin-left: 8px;
+  font-size: 14px;
+  color: var(--color-gray-700);
+}
+
+.filterActions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.clearButton {
+  font-size: 14px;
+  color: var(--color-gray-600);
+}
+
+.clearButton:hover {
+  color: var(--color-gray-800);
+}
+
+.applyButton {
+  font-size: 14px;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.applyButton:hover {
+  color: var(--color-primary-dark);
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.tableHeader {
+  background-color: var(--color-gray-50);
+}
+
+.tableHeaderCell {
+  padding: 12px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tableBody {
+  background-color: var(--color-white);
+}
+
+.tableRow {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.tableRow:hover {
+  background-color: var(--color-gray-50);
+}
+
+.tableCell {
+  padding: 16px 24px;
+  white-space: nowrap;
+}
+
+.customerCell {
+  display: flex;
+  align-items: center;
+}
+
+.customerAvatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+.customerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.customerName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+}
+
+.customerCompany {
+  font-size: 14px;
+  color: var(--color-gray-500);
+}
+
+.emailCell {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--color-gray-700);
+}
+
+.emailIcon {
+  color: var(--color-gray-400);
+  margin-right: 8px;
+}
+
+.lastSeenCell {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--color-gray-500);
+}
+
+.lastSeenIcon {
+  color: var(--color-gray-400);
+  margin-right: 8px;
+}
+
+.tagsCell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  padding: 4px 8px;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.conversationsCell {
+  font-size: 14px;
+  color: var(--color-gray-500);
+}
+
+.actionCell {
+  text-align: right;
+}
+
+.viewButton {
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.viewButton:hover {
+  color: var(--color-primary-dark);
+}
